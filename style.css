@@ -40,6 +40,7 @@ body {
 .container {
     display: flex;
     align-items: center;
+
 }
 
 .left-section {
@@ -127,6 +128,7 @@ body {
     width: 300px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
+
 
 }
 
@@ -234,6 +236,9 @@ form button {
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    position: absolute;
+    right: 15rem;
+
 
 }
 
@@ -329,6 +334,18 @@ form button {
 
     .right-section {
         margin-top: 6rem;
+    }
+
+    .thank {
+        z-index: 100px;
+        border: 2px solid rgb(24, 2, 24);
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 20px;
+        position: absolute;
+        bottom: -90px;
+        right: 35px;
+
     }
 
 

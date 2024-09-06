@@ -17,9 +17,13 @@ const submitBtn = document.querySelector(".submit-btn");
 
 const completed = document.querySelector(".thank");
 const form = document.querySelector(".form");
+const rightSection = document.querySelector(".right-section");
+const thankBtn = document.querySelector(".thankBtn");
 
 
-console.log(submitBtn);
+
+
+console.log(rightSection);
 
 
 function setCardNumber(e) {
@@ -93,12 +97,20 @@ function handleSumbit(e) {
     if (nameInp.value && numberInp.value && monthInp.value && yearInp.value && cvcInp.value) {
         completed.classList.remove("hidden");
         form.classList.add("hidden");
-        console.log(completed, form);
+        rightSection.classList.add("hidden");
+        console.log(completed, rightSection);
 
     }
 
 
 };
+
+function handleComplete() {
+    completed.classList.add("hidden");
+    rightSection.classList.remove("hidden");
+    console.log("thankBtn");
+
+}
 
 
 
@@ -108,5 +120,8 @@ nameInp.addEventListener("keyup", setCardName);
 monthInp.addEventListener("keyup", setCardMonth);
 yearInp.addEventListener("keyup", setCardYear);
 cvcInp.addEventListener("keyup", setCardCvc);
-submitBtn.addEventListener("click", handleSumbit)
+submitBtn.addEventListener("click", handleSumbit);
+thankBtn.addEventListener("click", handleComplete);
+
+
 
